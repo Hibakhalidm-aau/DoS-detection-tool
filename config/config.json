@@ -1,1 +1,8 @@
-
+{
+    "RAW_DATA_PATH": "data/raw/captured_traffic.csv",
+    "PROCESSED_DATA_PATH": "data/processed/processed_data.csv",
+    "MODEL_PATH": "models/ddos_model.pkl",
+    "ANOMALY_DATA_PATH": "data/anomalies/anomaly_data.csv",
+    "LOG_PATH": "logs/app.log",
+    "THRESHOLD_PACKET_RATE": 100
+}
