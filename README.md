@@ -20,32 +20,38 @@ This project is designed to detect Distributed Denial of Service (DDoS) attacks 
 - `models/`: Trained models
 - `logs/`: Log files
 
-## Configuration Paths
+## How the Project Works
+1. **Packet Sniffing:**
 
-- `RAW_DATA_PATH`: Path to raw captured traffic (`data/raw/captured_traffic.csv`)
-- `PROCESSED_DATA_PATH`: Path to processed data (`data/processed/processed_data.csv`)
-- `MODEL_PATH`: Path to trained model (`models/ddos_model.pkl`)
-- `ANOMALY_DATA_PATH`: Path to anomaly data (`data/anomalies/anomaly_data.csv`)
-- `LOG_PATH`: Path to log file (`logs/app.log`)
-- `THRESHOLD_PACKET_RATE`: Packet rate threshold for detection (example: 100)
-## Requirements
+The tool starts by capturing network packets using a packet sniffer.
+The captured packets are stored in a raw data file.
+2. **Data Preprocessing:**
 
-The following Python packages are required to run this project:
-- scapy
-- pandas
-- numpy
-- scikit-learn
-- joblib
-- matplotlib
-- logzero
-- datetime
+The raw data is preprocessed to extract relevant features needed for DDoS detection.
+The preprocessed data is saved for further analysis.
+3. **Machine Learning Model:**
 
-You can install them using the following command:
-```bash
-pip install -r requirements.txt
-```
+The tool trains a machine learning model using historical network data.
+The trained model is used to predict anomalies in the network traffic.
+4. **Anomaly Detection:**
 
-## Installation
+The tool analyzes the network traffic in real-time and uses the trained model to detect anomalies.
+Anomalies are identified as potential DDoS attacks.
+5. **IP Filtering**:
+
+The tool checks and filters IP addresses based on predefined rules.
+Suspicious IP addresses can be blacklisted to prevent further attacks.
+6. **Visualization:**
+
+The results of the detection are visualized to provide a clear understanding of the network traffic and detected anomalies.
+Visualization helps in monitoring and taking preventive actions against DDoS attacks.
+
+## Configuration and Usage
+
+### Configuration
+Clients can configure the tool using the `config.json` file, specifying paths for raw data, processed data, models, and logs.
+
+### Usage
 1. Clone the repository:
     ```bash
     git clone https://github.com/hibakhalidm/DDoS-detection-tool.git
@@ -57,10 +63,7 @@ pip install -r requirements.txt
     pip install -r requirements.txt
     ```
 
-## Usage
-1. Run the main Python script:
+3. Run the main script:
     ```bash
     python src/main.py
     ```
-
-
