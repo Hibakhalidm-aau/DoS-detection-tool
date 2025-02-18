@@ -1,11 +1,10 @@
-# src/visualize.py
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
 import os
 
-def visualize_data(file_path="../data/processed/anomaly_detected.csv", 
-                  save_path="../data/processed/anomaly_plot.png", 
+def visualize_data(file_path="../data/anomalies/anomaly_data.csv", 
+                  save_path="../data/anomalies/anomaly_plot.png", 
                   plot_type='line'):
     try:
         # Load data
