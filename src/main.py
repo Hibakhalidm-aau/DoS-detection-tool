@@ -8,10 +8,6 @@ from src.filtering.ip_filter import check_and_filter_ip
 from src.visualize import visualize_data
 from src.utils.config import Config
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, filename=Config.LOG_PATH,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
 def setup_arg_parser():
     """Set up command line argument parser."""
     parser = argparse.ArgumentParser(description="DDoS Detection Tool")
@@ -23,6 +19,10 @@ def main(sniff_count):
     # Load and validate configuration
     config = Config(config_file="../config/config.json")
     config.validate()
+
+    # Configure logging
+    logging.basicConfig(level=logging.INFO, filename=config.config["LOG_PATH"],
+                        format='%(asctime)s - %(levelname)s - %(message)s')
 
     # Phase 1: Start packet sniffing
     logging.info("Starting packet sniffing...")
