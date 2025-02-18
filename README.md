@@ -7,7 +7,27 @@ This project is designed to detect Distributed Denial of Service (DDoS) attacks 
 - Feature extraction from network packets
 - Machine learning-based DDoS detection
 - Visualization of network traffic
+## Directory Structure
 
+- `src/`: Source code
+  - `main.py`: Main script
+  - `preprocess.py`: Data preprocessing
+  - `utils/config.py`: Configuration
+- `data/`: Data storage
+  - `raw/captured_traffic.csv`: Raw captured traffic
+  - `processed/`: Processed data
+  - `anomalies/`: Anomalies data
+- `models/`: Trained models
+- `logs/`: Log files
+
+## Configuration Paths
+
+- `RAW_DATA_PATH`: Path to raw captured traffic (`data/raw/captured_traffic.csv`)
+- `PROCESSED_DATA_PATH`: Path to processed data (`data/processed/processed_data.csv`)
+- `MODEL_PATH`: Path to trained model (`models/ddos_model.pkl`)
+- `ANOMALY_DATA_PATH`: Path to anomaly data (`data/anomalies/anomaly_data.csv`)
+- `LOG_PATH`: Path to log file (`logs/app.log`)
+- `THRESHOLD_PACKET_RATE`: Packet rate threshold for detection (example: 100)
 ## Requirements
 
 The following Python packages are required to run this project:
