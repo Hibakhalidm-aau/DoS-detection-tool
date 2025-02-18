@@ -1,5 +1,3 @@
-# src/utils/config.py
-
 import os
 import json
 
