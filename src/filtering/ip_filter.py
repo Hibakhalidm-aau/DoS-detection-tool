@@ -1,4 +1,3 @@
-# src/filtering/ip_filter.py
 from collections import defaultdict
 from datetime import datetime
 from src.utils.detection_log import log_detection
