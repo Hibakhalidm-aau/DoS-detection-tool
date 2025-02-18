@@ -28,8 +28,8 @@ pip install -r requirements.txt
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/hibakhalidm/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/hibakhalidm/DDoS-detection-tool.git
+    cd DDoS-detection-tool
     ```
 
 2. Install the required packages:
