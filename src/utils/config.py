@@ -4,10 +4,11 @@ import json
 class Config:
     # Default configuration settings
     DEFAULT_CONFIG = {
-        "RAW_DATA_PATH": "../data/raw/captured_traffic.csv",
-        "PROCESSED_DATA_PATH": "../data/processed/processed_data.csv",
-        "ANOMALY_DATA_PATH": "../data/processed/anomaly_detected.csv",
-        "LOG_PATH": "../logs/detection.log",
+        RAW_DATA_PATH = "../data/raw/captured_traffic.csv"
+        PROCESSED_DATA_PATH = "../data/processed/processed_data.csv"
+        MODEL_PATH = "../models/ddos_model.pkl"
+        ANOMALY_DATA_PATH = "../data/anomalies/anomaly_data.csv"
+        LOG_PATH = "../logs/app.log",
         "THRESHOLD_PACKET_RATE": 100,  # Example threshold for packet rate
         "CONTAMINATION_RATE": 0.01,     # Contamination rate for Isolation Forest
         "MODEL_PATH": "../models/trained_model.pkl",
